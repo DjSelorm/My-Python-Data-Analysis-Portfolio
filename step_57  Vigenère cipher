@@ -1,0 +1,23 @@
+# if the offset were different for each letter? That would be much more difficult to decrypt. 
+#This algorithm is referred to as the Vigenère cipher,
+# where the offset for each letter is determined by another text, called the key.
+
+text = 'Hello Zaira'
+custom_key = 'python'
+
+def vigenere(message, key):
+    key_index = 0
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    encrypted_text = ''
+
+    for char in message.lower():
+
+#Append space to the message  
+        if char == ' ':
+            encrypted_text += char
+        else:
+            index = alphabet.find(char)
+            new_index = (index + offset) % len(alphabet)
+            encrypted_text += alphabet[new_index]
+    print('plain text:', message)
+    print('encrypted text:', encrypted_text)
