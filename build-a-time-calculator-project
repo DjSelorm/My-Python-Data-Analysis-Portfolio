@@ -1,0 +1,69 @@
+** start of main.py **
+
+def add_time(start, duration, starting_day=None):
+    # List of days for reference
+    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+    # Parse start time
+    time, meridiem = start.split()
+    start_hour, start_minute = map(int, time.split(":"))
+
+    # Convert start time to 24-hour format
+    if meridiem == "PM" and start_hour != 12:
+        start_hour += 12
+    if meridiem == "AM" and start_hour == 12:
+        start_hour = 0
+
+    # Parse duration time
+    dur_hour, dur_minute = map(int, duration.split(":"))
+
+    # Add duration to start time
+    end_minute = start_minute + dur_minute
+    extra_hour = end_minute // 60
+    end_minute = end_minute % 60
+
+    end_hour = start_hour + dur_hour + extra_hour
+    days_passed = end_hour // 24
+    end_hour = end_hour % 24
+
+    # Convert back to 12-hour format
+    if end_hour == 0:
+        display_hour = 12
+        display_meridiem = "AM"
+    elif end_hour < 12:
+        display_hour = end_hour
+        display_meridiem = "AM"
+    elif end_hour == 12:
+        display_hour = 12
+        display_meridiem = "PM"
+    else:
+        display_hour = end_hour - 12
+        display_meridiem = "PM"
+
+    # Format minutes with leading zero if needed
+    display_minute = f"{end_minute:02d}"
+
+    # Calculate new day of week if starting_day provided
+    day_str = ""
+    if starting_day:
+        starting_day = starting_day.capitalize()
+        start_index = days.index(starting_day)
+        new_day_index = (start_index + days_passed) % 7
+        day_str = f", {days[new_day_index]}"
+
+    # Add info about days passed
+    if days_passed == 1:
+        day_passed_str = " (next day)"
+    elif days_passed > 1:
+        day_passed_str = f" ({days_passed} days later)"
+    else:
+        day_passed_str = ""
+
+    # Combine everything
+    new_time = f"{display_hour}:{display_minute} {display_meridiem}{day_str}{day_passed_str}"
+
+    return new_time
+
+
+** end of main.py **
+
