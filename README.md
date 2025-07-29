@@ -1,8 +1,11 @@
-# python_freeCode_camp_scientific_cert
- Learning/Reveiwing python at freecodecamp from february 2025. 
- includes challenging coding projects, thats demonstrate that 
- a good foundational knowledge has been obtained using python
- and python libraries(eg numpy, matplotlib, seaborn, pandas etc).
+# python_freeCode_camp_
+ This repository showcases my proficiency in Python through a collection of final-challenge projects from freeCodeCamp. Spanning scientific computing, data analysis, machine learning fundamentals, web scraping, and automation, each folder represents hands-on work from over 300 hours of coursework and real-world problem solving.
+
+What You’ll Find
+- Scientific Computing files leveraging NumPy, SciPy,atplotlib, seaborn, pandas etc
+- Data Analysis files built with Pandas, Matplotlib, and real datasets.
+ 
+These demonstrate that a good foundational knowledge has been obtained using python
+
 good luck!
-it's fun so far!
 let's go!!
