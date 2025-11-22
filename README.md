@@ -1,5 +1,5 @@
 # python_freeCode_camp_
- This repository showcases my proficiency in Python through a collection of final-challenge projects from freeCodeCamp. Spanning scientific computing, data analysis, machine learning fundamentals, web scraping, and automation, each folder represents hands-on work from over 300 hours of coursework and real-world problem solving.
+ This repository showcases my proficiency in Python through a collection of final-challenge projects from freeCodeCamp. Spanning scientific computing, data analysis, machine learning fundamentals, and automation, each folder represents hands-on work from over 300 hours of coursework and real-world problem solving.
 
 What You’ll Find
 - Scientific Computing files leveraging NumPy, SciPy,atplotlib, seaborn, pandas etc
